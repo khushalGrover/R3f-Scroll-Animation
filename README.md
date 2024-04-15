@@ -2,13 +2,22 @@
 A boilerplate to build R3F projects
 
 ## Live demo
-https://khushalgrover.github.io/r3f-vite-starter/
+https://khushalgrover.github.io/R3f-Scroll-Animation/
 
-## To run locally
-```
+## How to Start
+After cloning from [https://github.com/khushalGrover/R3f-Scroll-Animation], follow these steps to get started:
+
+1. Make sure you have yarn installed. If not, install it from [https://yarnpkg.com/](https://yarnpkg.com/).
+2. Run the following commands in your terminal:
+
+```bash
 yarn
+npm install gh-pages --save-dev
 yarn dev
 ```
 
-
-![image](https://user-images.githubusercontent.com/6551176/221732091-23ee52cb-4150-42fa-b998-43628d7a6b0d.png)
+## Deploy
+```bash
+yarn build
+yarn deploy -- -m "Deploy React app to GitHub Pages"
+```
