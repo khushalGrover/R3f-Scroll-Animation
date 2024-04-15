@@ -15,9 +15,9 @@ export function Prototype3(props) {
 	const { nodes, materials } = useGLTF("./models/prototype3.gltf");
 	const ref = useRef();
 	const tl = useRef();
-  const floorThreeRef = useRef();
-  const floorTwoRef = useRef();
-  const floorOneRef = useRef();
+	const floorThreeRef = useRef();
+	const floorTwoRef = useRef();
+	const floorOneRef = useRef();
 	const scroll = useScroll();
 
 	useFrame(() => {
@@ -28,7 +28,7 @@ export function Prototype3(props) {
 		tl.current = gsap.timeline();
 
 		// VERTICAL ANIMATION
-    
+
 		tl.current.to(
 			ref.current.position,
 			{
@@ -38,67 +38,96 @@ export function Prototype3(props) {
 			0
 		);
 
-    // FLOOR One ANIMATION
-    tl.current.from(
-      floorOneRef.current.position,
-      {
-        duration: 0.5,
-        z: -2,
-      },
-      -0.5
-    );
+		// // Whole Floor animtion
+		// tl.current.from(
+		//   ref.current.position,
+		//   {
+		//     duration: 0.5,
+		//     y: 0,
+		//   },
+		//   -0.5
+		// );
 
-    // FLOOR Two ANIMATION
-    tl.current.from(
-      floorTwoRef.current.position,
-      {
-        duration: 0.5,
-        z: -8,
-      },
-      0.5
-    );
-    tl.current.to (
-      floorTwoRef.current.rotation,
-      {
-        duration: 0.5,
-        y: Math.PI / 2,
-      },
-      0.75
-    );
+		// FLOOR One ANIMATION
+		tl.current.from(
+			floorOneRef.current.position,
+			{
+				duration: 0.5,
+				z: -2,
+			},
+			-0.5
+		);
+		tl.current.to(
+			floorOneRef.current.position,
+			{
+				duration: 0.5,
+				y: -2,
+			},
+			1
+		);
 
-    // FLOOR Three ANIMATION
-    tl.current.from(
-      floorThreeRef.current.position,
-      {
-        duration: 0.5,
+		// FLOOR Two ANIMATION
+		tl.current.from(
+			floorTwoRef.current.position,
+			{
+				duration: 0.5,
+				z: -8,
+			},
+			0
+		);
+		tl.current.to(
+			floorTwoRef.current.rotation,
+			{
+				duration: 0.5,
+				y: Math.PI / 2,
+			},
+			0.5
+		);
+		tl.current.to(
+			floorTwoRef.current.position,
+			{
+				duration: 0.75,
+				z: 2,
+				x: 2,
+			},
+			1
+		);
 
-        y: 5,
-      },
-      1
-    );
-    tl.current.to(
-      floorThreeRef.current.position,
-      {
-        duration: 0.5,
-        
-        z: 4,
-      },
-      1.5
-      
-    );
-    
-    tl.current.to(
-      floorThreeRef.current.position,
-      {
-        duration: 0.5,
-        x: 2,
-  
-      },
-      2
+		tl.current.to(
+			floorTwoRef.current.position,
+			{
+				duration: 0.5,
+				y: -6,
+			},
+			3
+		);
 
-    );
-    
+		// FLOOR Three ANIMATION
+		tl.current.from(
+			floorThreeRef.current.position,
+			{
+				duration: 0.5,
+				y: 5,
+			},
+			1.75
+		);
+		tl.current.to(
+			floorThreeRef.current.position,
+			{
+				duration: 0.5,
+				z: 2,
+			},
+			2.5
+		);
 
+		tl.current.to(
+			floorThreeRef.current.position,
+			{
+				duration: 0.5,
+				x: 4,
+			},
+			3
+		);
 	}, []);
 
 	return (
@@ -128,7 +157,7 @@ export function Prototype3(props) {
 				</group>
 			</group>
 			<group position={[0, 0, 0]}>
-				<group ref={floorOneRef} >
+				<group ref={floorOneRef}>
 					<mesh
 						geometry={nodes.Cube002.geometry}
 						material={materials["Material.001"]}
