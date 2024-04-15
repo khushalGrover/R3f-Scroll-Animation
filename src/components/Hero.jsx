@@ -20,39 +20,11 @@ export function Hero() {
 	};
 
 	return (
-		<div className="flex w-full min-h-[800px] items-center justify-center border border-gray-200 ">
-			<div className="flex w-1/2 h-full items-center justify-center border-r border-gray-200">
-				<div className="flex flex-col gap-0.5 items-center justify-center">
-					<Button
-						size="lg"
-						variant="outline"
-						onClick={handleFirstButtonClick}
-					>
-						First Button
-					</Button>
-					<Button
-						size="lg"
-						variant="outline"
-						onClick={handleSecondButtonClick}
-					>
-						Second Button
-					</Button>
-					<Button
-						size="lg"
-						variant="outline"
-						onClick={handleThirdButtonClick}
-					>
-						Third Button
-					</Button>
-					<div className="text-3xl font-bold underline">124</div>
-				</div>
-			</div>
-			<div className="flex w-1/2 h-full items-center justify-center p-6">
-				<Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }}>
-					{/* <color attach="background" args={["#ececec"]} /> */}
-					<Experience arg={arg} />
-				</Canvas>
-			</div>
-		</div>
+		<div className="outline flex flex-col">
+            <h1 className="text-xl underline">Building.com</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non itaque quaerat enim praesentium voluptate quidem facilis quos error doloremque iure, placeat recusandae magni sit, similique natus deserunt fugiat voluptas dolorem.
+            </p>
+        </div>
 	);
 }
