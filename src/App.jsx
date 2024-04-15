@@ -1,11 +1,9 @@
-import { EnvironmentCanvas } from "./components/canvas/EnvironmentCanvas";
-import Hero from "./components/Hero";
+import { Hero } from "./components/Hero";
+
 function App() {
   return (
     <>
-      <EnvironmentCanvas />
       <Hero />
-    
     </>
   );
 }
