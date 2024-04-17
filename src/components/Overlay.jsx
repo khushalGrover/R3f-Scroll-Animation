@@ -1,54 +1,36 @@
-import { Scroll } from "@react-three/drei";
+// Hero.jsx
+import React, { useState } from "react";
+import Button from "./Button"; // Import your custom Button component
 
-const Section = (props) => {
-	return (
-		<section className={`h-screen flex flex-col justify-center p-10 ${props.right ? 'items-end': 'items-start'}`}>
-			<div className="w-1/2 flex items-center justify-center">
-				<div className="max-w-sm w-full">
-					<div className="bg-white rounded-lg px-8 py-12">
-						{props.children}
-					</div>
-				</div>
-			</div>
-		</section>
-	);
-};
+export function Overlay() {
+	const [arg, setArg] = useState(0); // State to store the argument
 
-export const Overlay = () => {
+	const handlePrevBtn = () => {
+		/* If the value of arg is 0, then return */
+		if (arg === 1) {
+			return;
+		}
+		setArg(arg - 1); // Decrease the value of arg by 1
+		console.log("First button clicked:", arg);
+	};
+	const handleNextBtn = () => {
+		/* If the value of arg is 5, then return */
+		if (arg === 3) {
+			return;
+		}
+		setArg(arg + 1); // Increase the value of arg by 1
+		console.log("Second button clicked:", arg);
+	};
+
 	return (
-		<Scroll html>
-			<div className="w-screen">
-				<Section>
-					<h1>Building.com</h1>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing
-						elit. Non itaque quaerat enim praesentium voluptate
-						quidem facilis quos error doloremque iure, placeat
-						recusandae magni sit, similique natus deserunt fugiat
-						voluptas dolorem.
-					</p>
-				</Section>
-				<Section right>
-					<h1>The Second Title</h1>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing
-						elit. Non itaque quaerat enim praesentium voluptate
-						quidem facilis quos error doloremque iure, placeat
-						recusandae magni sit, similique natus deserunt fugiat
-						voluptas dolorem.
-					</p>
-				</Section>
-                <Section>
-					<h1>The Third Title</h1>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing
-						elit. Non itaque quaerat enim praesentium voluptate
-						quidem facilis quos error doloremque iure, placeat
-						recusandae magni sit, similique natus deserunt fugiat
-						voluptas dolorem.
-					</p>
-				</Section>
-			</div>
-		</Scroll>
+		<div className="flex items-end justify-center w-screen ">
+			<Button onClick={handlePrevBtn} size="lg" variant="outline">
+				Prev.
+			</Button>
+			<Button size="ls" variant="outline">{arg}</Button>
+			<Button onClick={handleNextBtn} size="lg" variant="outline">
+				Next
+			</Button>
+		</div>
 	);
-};
+}

@@ -1,31 +1,55 @@
-// Hero.jsx
-import React, { useState } from "react";
-import Button from "./Button"; // Import your custom Button component
-import { Canvas } from "@react-three/fiber";
-import { Experience } from "./Experience";
+import { Scroll } from "@react-three/drei";
 
-export function Hero() {
-	const [arg, setArg] = useState(null); // State to store the argument
-
-	const handleFirstButtonClick = () => {
-		setArg("1");
-		console.log("First button clicked:", arg);
-	};
-	const handleSecondButtonClick = () => {
-		setArg("2");
-		console.log("Second button clicked:", arg);
-	};
-	const handleThirdButtonClick = () => {
-		setArg("3");
-		console.log("Third button clicked:", arg);
-	};
-
+const Section = (props) => {
 	return (
-		<div className="outline flex flex-col">
-            <h1 className="text-xl underline">Building.com</h1>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non itaque quaerat enim praesentium voluptate quidem facilis quos error doloremque iure, placeat recusandae magni sit, similique natus deserunt fugiat voluptas dolorem.
-            </p>
-        </div>
+		<section className={`h-screen flex flex-col justify-center p-10 ${props.right ? 'items-end': 'items-start'}`}>
+			<div className="w-1/2 flex items-center justify-center">
+				<div className="max-w-sm w-full">
+					<div className="bg-white rounded-lg px-8 py-12">
+						{props.children}
+					</div>
+				</div>
+			</div>
+		</section>
 	);
-}
+};
+
+export const Hero = () => {
+	return (
+		<Scroll html>
+			
+			<div className="w-screen">
+				<Section>
+					<h1>Building.com</h1>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Non itaque quaerat enim praesentium voluptate
+						quidem facilis quos error doloremque iure, placeat
+						recusandae magni sit, similique natus deserunt fugiat
+						voluptas dolorem.
+					</p>
+				</Section>
+				<Section right>
+					<h1>The Second Title</h1>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Non itaque quaerat enim praesentium voluptate
+						quidem facilis quos error doloremque iure, placeat
+						recusandae magni sit, similique natus deserunt fugiat
+						voluptas dolorem.
+					</p>
+				</Section>
+                <Section>
+					<h1>The Third Title</h1>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Non itaque quaerat enim praesentium voluptate
+						quidem facilis quos error doloremque iure, placeat
+						recusandae magni sit, similique natus deserunt fugiat
+						voluptas dolorem.
+					</p>
+				</Section>
+			</div>
+		</Scroll>
+	);
+};

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Button = ({ children, size, variant, onClick }) => {
   // Determine the Tailwind CSS classes based on size and variant props
-  let classes = 'py-2 px-4 rounded';
+  let classes = 'py-2 px-4 m-2 rounded';
   if (size === 'lg') {
     classes += ' text-lg';
   }
