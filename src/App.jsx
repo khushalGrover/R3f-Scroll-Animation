@@ -1,6 +1,7 @@
 import Button from "./components/Button"; // Import your custom Button component
 import React, { useState } from "react";
 import { EnvironmentCanvas } from "./components/canvas/EnvironmentCanvas";
+// import { EnvironmentCanvas2 } from "./components/canvas/EnvironmentCanvas2";
 function App() {
 	const [arg, setArg] = useState(1); // State to store the argument
 
@@ -25,6 +26,7 @@ function App() {
 		<div className="relative">
 			<div className=" fixed flex flex-col h-full w-full outline">
 				
+				{/* <EnvironmentCanvas arg={arg} /> */}
 				<EnvironmentCanvas arg={arg} />
 				
 				

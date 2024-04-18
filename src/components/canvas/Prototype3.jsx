@@ -20,10 +20,7 @@ export function Prototype3(props) {
 	const floorOneRef = useRef();
 	const scroll = useScroll();
 
-	useFrame(() => {
-		tl.current.seek(scroll.offset * tl.current.duration());
-	});
-
+	
 	// useLayoutEffect(() => {
 	// 	tl.current = gsap.timeline();
 
@@ -130,73 +127,7 @@ export function Prototype3(props) {
 	// 	);
 	// }, []);
 
-	useLayoutEffect(() => {
-		tl.current = gsap.timeline();
-
-		if (props.arg === 1) {
-			// tl.current.seek(1);
-			console.log("arg 1");
-
-			tl.current.from(
-				floorOneRef.current.position,
-				{
-					duration: 1,
-					z: 0,
-				},
-				-0.5
-			);
-			tl.current.to(
-				floorOneRef.current.position,
-				{
-					duration: 0.5,
-					z: -10,
-				},
-				0
-			);
-		} else if (props.arg === 2) {
-			// tl.current.seek(2);
-			console.log("arg 2");
-
-			tl.current.from(
-				floorTwoRef.current.position,
-				{
-					duration: 1,
-					z: 0,
-				},
-				0
-			);
-			tl.current.to(
-				floorTwoRef.current.position,
-				{
-					duration: 0.5,
-					z: -10,
-				},
-				0.5
-			);
-
-		} else if (props.arg === 3) {
-			// tl.current.seek(0);
-			console.log("arg 3");
-			tl.current.from(
-				floorThreeRef.current.position,
-				{
-					duration: 0.5,
-					y: 5,
-				},
-				1.75
-			);
-			tl.current.to(
-				floorThreeRef.current.position,
-				{
-					duration: 0.5,
-					z: 2,
-				},
-				2.5
-			);
-
-			
-		}
-	}, [props.arg]);
+	
 	return (
 		<group {...props} dispose={null} ref={ref} position={[-1, -1, 1]}>
 			<group position={[-4, 4, -4]}>
