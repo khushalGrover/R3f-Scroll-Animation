@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'r3f-vite-starter',
+  base: 'R3f-Scroll-Animation',
   plugins: [react()],
   server: {
     host: true
