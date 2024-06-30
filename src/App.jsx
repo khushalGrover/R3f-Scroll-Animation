@@ -3,7 +3,7 @@ import { EnvironmentCanvas } from "./components/canvas/EnvironmentCanvas";
 function App() {
 	return (
 		<div className="relative">
-			<div className=" p-4 fixed flex h-full w-full outline">
+			<div className="fixed flex h-full w-full outline">
 				<EnvironmentCanvas />
 			</div>
 		</div>

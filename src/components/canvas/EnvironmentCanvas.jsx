@@ -6,10 +6,10 @@ import { Overlay } from ".././Overlay";
 export const EnvironmentCanvas = () => {
 	return (
 		<Canvas shadows camera={{ position: [3, 0, 0], fov: 50 }}>
-			<color attach="background" args={["#ececec"]} />
+			<color attach="background" args={["#1e1e1e"]} />
 			<ambientLight intensity={0.5} />
 			<OrbitControls enableZoom={false} />
-			<ScrollControls pages={3.3} damping={0.1}>
+			<ScrollControls pages={3.3} damping={0.1}>gi 
         <Overlay />
 				<Prototype3 />
 			</ScrollControls>
