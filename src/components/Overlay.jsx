@@ -19,7 +19,7 @@ export const Overlay = () => {
 		<Scroll html>
 			<div className="w-screen">
 				<Section>
-					<h1>Building.com</h1>
+					<h1>Bharat's AI and Drone Expo</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
 						elit. Non itaque quaerat enim praesentium voluptate
