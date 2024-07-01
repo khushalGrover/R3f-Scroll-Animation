@@ -124,10 +124,11 @@ export function Prototype3(props) {
 			floorThreeRef.current.position,
 			{
 				duration: 0.5,
-				x: 4,
+				x: 2,
 			},
 			3
 		);
+		
 	}, []);
 
 	return (

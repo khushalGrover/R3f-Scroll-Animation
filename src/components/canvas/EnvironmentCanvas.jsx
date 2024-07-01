@@ -8,11 +8,11 @@ export const EnvironmentCanvas = () => {
 		<Canvas shadows camera={{ position: [3, 0, 0], fov: 50 }}>
 			<color attach="background" args={["#1e1e1e"]} />
 			<ambientLight intensity={0.5} />
-			<OrbitControls enableZoom={false} />
-			<ScrollControls pages={3.3} damping={0.1}>gi 
-        <Overlay />
+			{/* <OrbitControls enableZoom={false} /> */}
+			<ScrollControls pages={5.8} damping={0.1}>
+				<Overlay />
 				<Prototype3 />
-			</ScrollControls>
+			</ScrollControls>	
 		</Canvas>
 	);
 };
