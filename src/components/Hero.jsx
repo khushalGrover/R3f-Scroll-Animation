@@ -22,7 +22,7 @@ export function Hero() {
 
 	return (
 		<div className="outline flex flex-col">
-            <h1 className="text-xl underline">Building.com</h1>
+            <h1 className="text-xl underline">Buildingggg.com</h1>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non itaque quaerat enim praesentium voluptate quidem facilis quos error doloremque iure, placeat recusandae magni sit, similique natus deserunt fugiat voluptas dolorem.
             </p>

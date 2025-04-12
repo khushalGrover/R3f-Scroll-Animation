@@ -18,8 +18,8 @@ export const Overlay = () => {
 	return (
 		<Scroll html>
 			<div className="w-screen">
-				<Section>
-					<h1>Building.com</h1>
+				<Section right>
+					<h1>Hero Section</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
 						elit. Non itaque quaerat enim praesentium voluptate
@@ -28,7 +28,7 @@ export const Overlay = () => {
 						voluptas dolorem.
 					</p>
 				</Section>
-				<Section right>
+				<Section >
 					<h1>The Second Title</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -38,7 +38,7 @@ export const Overlay = () => {
 						voluptas dolorem.
 					</p>
 				</Section>
-                <Section>
+                <Section right>
 					<h1>The Third Title</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
